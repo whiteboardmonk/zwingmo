@@ -61,5 +61,6 @@ Zwingmo::Application.routes.draw do
   match '/credits', :to => "pages#credits"
   
   match '/users/:id', :to => "users#show"
+  match '/users/fbconnect', :to => "users#fbconnect"
   match 'users/:id/injet' => 'users#injet', :as => :injet
 end
