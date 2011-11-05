@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       graph = Koala::Facebook::GraphAPI.new(params['ac'])
       profile = graph.get_object("me")
       
-      if u = User.find_by_facebook_uid profile['id']
+      if user = User.find_by_facebook_uid(profile['id'])
         # update profile
         user.update_attributes(:email => profile['email'],
           :name => profile['name'],
