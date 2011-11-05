@@ -1,0 +1,14 @@
+production:
+  application_id: 331157267070
+  api_key: 331157267070
+  application_secret: 0ad52f1a71c53a9427d23d7d9e085b0e
+
+development:
+  application_id: 331157267070
+  api_key: 331157267070
+  application_secret: 0ad52f1a71c53a9427d23d7d9e085b0e
+
+test:
+  application_id: 331157267070
+  api_key: 331157267070
+  application_secret: 0ad52f1a71c53a9427d23d7d9e085b0e
