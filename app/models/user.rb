@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   
   def self.deduce_zomato_city_data(location)
-    case location.trim.downcase
+    case location.strip.downcase
     when 'delhi'
       "1,28.625789,77.210276"
     when 'mumbai'
@@ -27,12 +27,11 @@ class User < ActiveRecord::Base
     end
   end
   
-  
   protected
   
   def after_update
     local_data = User.deduce_zomato_city_data(self.location).to_s.split(',')
-    self.update_attributes(:zomato_city_id => local_data[0], 
+    self.update_attributes(:zomato_city_id => local_data[0].to_i, 
       :latitude => local_data[1], 
       :longitude => local_data[2]) if local_data.size == 3
   end

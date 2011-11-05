@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def fbconnect
     if params['ac']
       # pick/update user details on facebook
-      graph = Koala::Facebook::GraphAPI.new(params['ac'])
+      graph = Koala::Facebook::API.new(params['ac'])
       profile = graph.get_object("me")
       
       if user = User.find_by_facebook_uid(profile['id'])
