@@ -1,0 +1,102 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  background: #FFF;
+  color: #666;
+}
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 1.0em;
+}
+
+h1, h2, h3 { font-weight: bold; }
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+a img { border: none; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+
+#site-container {
+  width: 820px;
+  margin: 50px auto;
+  zoom: 1;
+  padding: 20px
+}
+
+#container {
+  
+}
+
+#footer {
+  clear:both;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#footer a {
+  text-decoration: none;
+  color: #999;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+#page-copy a, #page-copy a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+
+#corner-logo, #page-copy {
+  margin-right: 20px;
+  text-align:right;
+}
+
+#page-copy button { margin-right: -5px;}
+.corner-stamp {
+  width: 280px;
+  height: 120px;
+  padding: 10px;
+  margin: 10px;
+  float: right;
+}
