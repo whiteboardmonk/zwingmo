@@ -60,4 +60,6 @@ Zwingmo::Application.routes.draw do
   match '/about', :to => "pages#about"
   match '/credits', :to => "pages#credits"
   
+  match '/users/:id', :to => "users#show"
+  match 'users/:id/injet' => 'users#injet', :as => :injet
 end

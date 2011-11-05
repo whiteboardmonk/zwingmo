@@ -1,0 +1,17 @@
+<% content_for :js do %>
+<script type="text/javascript">
+
+</script>
+<% end %>
+
+<div id="container">
+  <div class="corner-stamp">
+    <%= link_to image_tag("zwingmo.png", :size => '280x113', :alt => '0'), root_url %>
+    Curated for <%= @user.name %>
+  </div>
+  <div id="page-copy">
+    <%= image_tag "facepile.png", :size => '440x299', :alt => '0' %>
+    <br/>
+    <button style="border:0;background-color: #FFF;"><%= image_tag('fb.png', :mouseover => 'fb_hover.png', :size =>'269x30', :id => 'fb_connect') %></button>
+  </div>
+</div>
