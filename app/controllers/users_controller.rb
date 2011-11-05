@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       end
       
       local_data = User.deduce_zomato_city_data(user.location).to_s.split(',')
-      self.update_attributes(:zomato_city_id => local_data[0].to_i, 
+      user.update_attributes(:zomato_city_id => local_data[0].to_i, 
         :latitude => local_data[1], 
         :longitude => local_data[2]) if local_data.size == 3
       
