@@ -26,13 +26,4 @@ class User < ActiveRecord::Base
       '4,12.971606,77.594376'
     end
   end
-  
-  protected
-  
-  def after_save
-    local_data = User.deduce_zomato_city_data(self.location).to_s.split(',')
-    self.update_attributes(:zomato_city_id => local_data[0].to_i, 
-      :latitude => local_data[1], 
-      :longitude => local_data[2]) if local_data.size == 3
-  end
 end
