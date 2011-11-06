@@ -113,7 +113,7 @@ strong { font-weight: bold; }
   bottom: 7px;
   color: #333;
   font-weight: bold;
-  padding: 2px;
+  padding: 4px;
 }
 
 .element img.ad_base{
@@ -126,4 +126,20 @@ strong { font-weight: bold; }
 .element img.featured, .element img.popular, .element img.new {
   position: absolute;
   right: 0px;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+#filter {text-align: center;}
+
+#filter a.filter {
+  color: #666;
+  text-decoration: underline;
 }
