@@ -28,9 +28,9 @@ zwingmo.Injet = function(){
     },
     fetch: function(user_id){
       var jqxhr = $.getJSON("/users/"+user_id+"/injets", function(data) {
-        var e = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/><div class='base'><%= title %></div></div>");
-        var f = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/><div class='base'><%= title %></div></div>");
-        var a = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/></div>");
+        var e = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/><div class='base'><%= title %></div><%= rb %></div>");
+        var f = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/><div class='base'><%= title %></div><%= rb %></div>");
+        var a = _.template("<div class='element <%= type %> <%= dim %>'><img src='<%= img_url %>' width='<%= w %>'/><img class='ad_base' src='/images/ad.png' width='75' height='75'/></div>");
         
         var logo_element = '<div class="element logo"><a href="/"><img alt="0" class="logo" height="94" src="/images/zwingmo.png" width="200"></a></div>'
         
@@ -38,26 +38,34 @@ zwingmo.Injet = function(){
         
         $.each(data.injets, function(i,item){
           var width;
+          var rb ='';
           
           switch(item.dim) {
             case 'tall':
               width = '200';
+              if(i < 6 && i%2 == 0){
+                rb = "<img class='popular' src='/images/popular.png' width='75' height='75'/>";
+              }
               break;
             case 'wide':
               width = '400';
+              rb = "<img class='featured' src='/images/featured.png' width='75' height='75'/>";
               break;
             case 'sq':
               width = '200';
+              if(i < 6 && i%3 == 0){
+                rb = "<img class='new' src='/images/new.png' width='75' height='75'/>";
+              }
           }
           
           var injet;
           
           switch(item.type) {
             case 'food':
-              injet = f({type: item.type, dim: item.dim, img_url: item.img_url, w: width, title: item.title});
+              injet = f({type: item.type, dim: item.dim, img_url: item.img_url, w: width, title: item.title, rb: rb});
               break;
             case 'event':
-              injet = e({type: item.type, dim: item.dim, img_url: item.img_url, w: width, title: item.title});
+              injet = e({type: item.type, dim: item.dim, img_url: item.img_url, w: width, title: item.title, rb: rb});
               break;
             case 'ad':
               injet = a({type: item.type, dim: item.dim, img_url: item.img_url, w: width});

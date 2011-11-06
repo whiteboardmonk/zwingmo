@@ -105,6 +105,8 @@ strong { font-weight: bold; }
 .element.sq { width: 200px; }
 .element.tall { width: 200px; }
 
+.element.wide {  }
+
 .element .base {
   background: transparent url('/images/light_bg.png');
   position: absolute;
@@ -112,5 +114,16 @@ strong { font-weight: bold; }
   color: #333;
   font-weight: bold;
   padding: 2px;
-  wdith: 100%;
+}
+
+.element img.ad_base{
+  position: absolute;
+  right: 0px;
+  bottom: 7px;
+}
+
+
+.element img.featured, .element img.popular, .element img.new {
+  position: absolute;
+  right: 0px;
 }
