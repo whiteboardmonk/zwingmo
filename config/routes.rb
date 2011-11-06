@@ -59,6 +59,8 @@ Zwingmo::Application.routes.draw do
   
   match '/about', :to => "pages#about"
   match '/credits', :to => "pages#credits"
+  match '/events/:id', :to => "pages#zomato_event"
+  match '/restaurants/:id', :to => "pages#zomato_restaurant"
   
   match '/users/fbconnect', :to => "users#fbconnect"
   match '/users/:id', :to => "users#show"
