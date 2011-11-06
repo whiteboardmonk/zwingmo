@@ -21,16 +21,18 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  padding: 20px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.7em;
   background: #FFF;
   color: #666;
+  margin:0;
+  padding:0;
 }
 
 h1, h2, h3, p, ul, ol, pre, dl {
   margin-bottom: 1.0em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 h1, h2, h3 { font-weight: bold; }
@@ -56,10 +58,8 @@ strong { font-weight: bold; }
 
 
 #site-container {
-  width: 820px;
-  margin: 50px auto;
-  zoom: 1;
-  padding: 20px
+  width: 880px;
+  margin:15px;
 }
 
 #container {
@@ -68,10 +68,10 @@ strong { font-weight: bold; }
 
 #footer {
   clear:both;
-  text-align: right;
-  margin-right: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #EEE;
 }
+
 #footer a {
   text-decoration: none;
   color: #999;
@@ -87,17 +87,30 @@ strong { font-weight: bold; }
 }
 
 
-#corner-logo, #page-copy {
-  margin-right: 20px;
-  text-align:right;
+#page-copy {
+  margin-left: 20px;
 }
 
-#page-copy button { margin-right: -5px;}
 
-.corner-stamp {
-  width: 280px;
-  height: 120px;
-  padding: 10px;
-  margin: 10px;
-  float: right;
+/* isotope */
+
+.element {
+  width: 200px;
+  margin: 0 10px 10px 0;
+  position: relative;
+}
+
+.element.logo { width: 200px; }
+.element.wide { width: 400px; }
+.element.sq { width: 200px; }
+.element.tall { width: 200px; }
+
+.element .base {
+  background: transparent url('/images/light_bg.png');
+  position: absolute;
+  bottom: 7px;
+  color: #333;
+  font-weight: bold;
+  padding: 2px;
+  wdith: 100%;
 }

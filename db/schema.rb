@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105103736) do
+ActiveRecord::Schema.define(:version => 20111105135455) do
 
   create_table "users", :force => true do |t|
     t.string  "name"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(:version => 20111105103736) do
     t.string  "facebook_access_token"
     t.string  "email"
     t.integer "facebook_uid"
+    t.string  "latitude"
+    t.string  "longitude"
+    t.integer "zomato_city_id"
   end
 
   add_index "users", ["facebook_uid"], :name => "index_users_on_facebook_uid"

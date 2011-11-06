@@ -32,3 +32,4 @@ gem 'pg', '0.10.1'
 
 gem 'jquery-rails'
 gem 'koala'
+gem 'httparty'

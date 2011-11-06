@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :set_user, :only => [:show, :injet]
+  before_filter :set_user, :only => [:show, :injets]
   
   def show
     # you have the user go ahead!
@@ -47,8 +47,8 @@ class UsersController < ApplicationController
     end
   end
   
-  def injet
-    
+  def injets
+    render :json => {:injets => @user.curate_injets}
   end
   
   private

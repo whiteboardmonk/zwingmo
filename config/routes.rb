@@ -62,5 +62,5 @@ Zwingmo::Application.routes.draw do
   
   match '/users/fbconnect', :to => "users#fbconnect"
   match '/users/:id', :to => "users#show"
-  match 'users/:id/injet' => 'users#injet', :as => :injet
+  match 'users/:id/injets' => 'users#injets', :as => :injets
 end
