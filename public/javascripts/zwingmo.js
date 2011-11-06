@@ -47,7 +47,7 @@ zwingmo.Injet = function(){
           switch(item.dim) {
             case 'tall':
               width = '200';
-              if(i < 6 && i%2 == 0){
+              if(i < 10 && i%2 == 0){
                 rb = "<img class='popular' src='/images/popular.png' width='75' height='75'/>";
                 rb_class = 'popular';
               }
