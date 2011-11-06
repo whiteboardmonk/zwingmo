@@ -58,7 +58,6 @@ class User < ActiveRecord::Base
     
     ij_types = User.injet_types
     num_injet_types = ij_types.size
-    logger.info("ij_types - #{num_injet_types}")
     
     (0..num_injet_types).each do |index|
       injet = {}
@@ -117,7 +116,15 @@ class User < ActiveRecord::Base
         'http://t0.gstatic.com/images?q=tbn:ANd9GcSuLGErtPAQoC03Nn3TJA7e1FJJlWuvA4cyd02sjwyGKH_lPzbHPSmR4Jcr',
         'http://www.vietnamparadisetravel.com/images/Hotels/CoolHotelHanoiEuropeanFood.jpg',
         'http://lallison.files.wordpress.com/2009/11/euro-food.jpg',
-        'http://izismile.com/img/img3/20101025/640/unamerican_food_640_03.jpg'
+        'http://izismile.com/img/img3/20101025/640/unamerican_food_640_03.jpg',
+        'http://2.bp.blogspot.com/_HdR_SleJ5YI/TODtDxV4BII/AAAAAAAAAHw/ZOIspwLTwCQ/s1600/food.jpg',
+        'http://www.thailand-travelonline.com/wp-content/uploads/2008/09/pad-thai.jpg',
+        'http://static.asiawebdirect.com/m/phuket/portals/phuket-com/homepage/magazine/thai-food/allParagraphs/03/image/600-tom-yam.jpg',
+        'http://2.bp.blogspot.com/-BCBjOQd6VwU/Tntap40HhcI/AAAAAAAAG2M/CYTsEFphn4E/s1600/Thai+food2.jpg',
+        'http://1.bp.blogspot.com/_XDoiO-2seK0/TSN5_YkdgnI/AAAAAAAAKuM/tXEXqIqVZsA/s1600/Lemon+Cilantro+Eggplant+Dip+Recipe.jpg',
+        'http://img4.sunset.com/i/2001/04/portuguese-lamb-l.jpg?400:400',
+        'http://www.bizbrowse.com/ABCFGT/cooking/vegetarian/images/mixed_vegetable_curry.jpg',
+        'http://img.xcitefun.net/users/2010/04/166541,xcitefun-food-4.jpg'
       ]
     }
   end
@@ -137,7 +144,11 @@ class User < ActiveRecord::Base
         'http://freeebooksearch.net/pics/9d60b_java_51yJ8xqxvbL.jpg'
       ],
       'sq' =>[
-        'http://www.eqgroup.com/images/concert-pink.jpg'
+        'http://www.eqgroup.com/images/concert-pink.jpg',
+        'http://www.hometownsevier.com/wp-content/uploads/2010/05/CMAfestLogo.jpg',
+        'http://wac.450f.edgecastcdn.net/80450F/wyrk.com/files/2011/07/The-Court-Yard-Hounds.jpg',
+        'http://image.buzzintown.com/files/event/upload_16000/upload_original/222881-nada-sangamam-carnatic-and-hindustani-vocal.jpg',
+        'http://3.bp.blogspot.com/_RC6BA5yh2Zg/SFlLgGQ7UqI/AAAAAAAAALw/o6TsuNsw6uo/s400/Love+Guru+Film+Release+party+_teaser_06-20-08.jpg'
       ]
     }
   end

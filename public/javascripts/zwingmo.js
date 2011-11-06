@@ -47,7 +47,7 @@ zwingmo.Injet = function(){
           switch(item.dim) {
             case 'tall':
               width = '200';
-              if(i < 10 && i%2 == 0){
+              if(i < 13 && i%2 == 0){
                 rb = "<img class='popular' src='/images/popular.png' width='75' height='75'/>";
                 rb_class = 'popular';
               }
@@ -126,9 +126,11 @@ zwingmo.Injet = function(){
             }
           }
           console.log(iurl);
-          tb_show('zwingmo - lifestyle discovery ingine', iurl + '?TB_iframe=true&height=350&width=740');
+          tb_show('zwingmo - lifestyle discovery ingine', iurl + '?TB_iframe=true&height=300&width=740');
           return false;
         });
+        
+        $('div.element.oclick').mouseenter(function(){$(this).css({'cursor': 'pointer'})}).mouseleave(function(){$(this).css({'cursor': 'auto'})});
       });
     }
   }

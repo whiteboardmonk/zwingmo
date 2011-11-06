@@ -104,8 +104,11 @@ strong { font-weight: bold; }
   float:left;
 }
 
+span.red {color: #ff007d;}
+span.green {color: #5aceb9;}
+
 #powered_by {
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 5px;
   border-top: 1px solid #CCC;
   padding-left: 15px;
