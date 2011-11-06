@@ -1,0 +1,20 @@
+<div id="container">
+  <div id="page-copy">
+    <h2><%= @event['name'] -%></h2>
+    <div class="left">
+      <img src="<%= @event['imageUrl'] -%>" height="120"/> <br/>
+      <strong>Thumbs Up / Down:</strong> <img alt="0" class="up_vote" height="18" src="/images/t_up.png" width="16" onmouseover="this.src='/images/t_up_hover.png'" onmouseout="this.src='/images/t_up.png'"/> &nbsp;<img alt="0" class="up_vote" height="18" src="/images/t_down.png" width="16" onmouseover="this.src='/images/t_down_hover.png'" onmouseout="this.src='/images/t_down.png'"/>
+    </div>
+    <div class="right">
+      <% show = @event['shows'][0]['show'] %>
+       <address>
+         <strong><%= show['timing_medium'] -%> <%= ", #{show['time']}" -%></strong><br/>
+         <strong>Venue:</strong> <%= show['venue_name'] -%><br/>
+         <strong>Contact:</strong> <%= @event['contact'] -%></strong>
+       </address>
+      <p><strong>Categories:</strong> <small><%= @event['categories']['category'].collect{|c| c['category_name']}.join(',') -%></small></p>
+      <p><%= @event['description'] -%></p>
+    </div>
+    <br style="clear:both"/>
+  </div>
+</div>

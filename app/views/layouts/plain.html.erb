@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zwingmo - lifestyle discovery ingine</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <%= javascript_include_tag "zwingmo" %>
+  <%= javascript_include_tag "thickbox-compressed" %>
+  <%= yield :js %>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+  <!-- 
+    Real *users* don't do this. Now that you have - why don't you
+    say a quick 'hi' to  me - akshay (dot) surve (at) gmail (dot) com
+  -->
+</head>
+<body>
+<div id="mini-site-container">
+  <%= yield %>
+  <div id="powered_by">
+    <%= link_to image_tag('powered_by_zomato.png', :size => '115x13', :alt=> 0), 'http://www.zomato.com' %>
+  </div>
+</div>
+
+
+
+</body>
+</html>

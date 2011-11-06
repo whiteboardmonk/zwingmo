@@ -1,0 +1,22 @@
+<div id="container">
+  <div id="page-copy">
+    <h2><%= @restaurant['name'] -%></h2>
+    <div class="left">
+      <img src="<%= @restaurant['photos']['0']['photo']['thumbUrl'] -%>" height="120"/> <br/>
+      <strong>Thumbs Up / Down:</strong> <img alt="0" class="up_vote" height="18" src="/images/t_up.png" width="16" onmouseover="this.src='/images/t_up_hover.png'" onmouseout="this.src='/images/t_up.png'"/> &nbsp;<img alt="0" class="up_vote" height="18" src="/images/t_down.png" width="16" onmouseover="this.src='/images/t_down_hover.png'" onmouseout="this.src='/images/t_down.png'"/>
+    </div>
+    <div class="right">
+      <% location = @restaurant['location'] %>
+       <address>
+         <strong>Address: <%= location['address'] -%><br/>
+         <strong>Locality:</strong> <%= location['locality'] -%><br/>
+         <strong>City:</strong> <%= location['city'] -%></strong>
+       </address>
+      <hr/>
+      <strong><u>Editor Rating</u></strong><br/>
+      Food: <em><%= @restaurant['editorRating']['food'] -%></em>, Service: <em><%= @restaurant['editorRating']['service'] -%></em>, Ambience: <em><%= @restaurant['editorRating']['ambience'] -%></em>, Overall: <em><%= @restaurant['editorRating']['overall'] -%></em>
+      
+    </div>
+    <br style="clear:both"/>
+  </div>
+</div>
